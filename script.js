@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     // card option
     const cardArray = [
       {
-        name: "bananas",
+        name: "banana",
         img: "./images/banana.png",
       },
       {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () =>{
       },
       {
         name: "lemon",
-        img: "./images/lemonpng",
+        img: "./images/lemon.png",
       },
       {
         name: "olive",
@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () =>{
         img: "./images/tomato.png",
       },
       {
-        name: "bananas",
-        img: "./images/bananas.png",
+        name: "banana",
+        img: "./images/banana.png",
       },
       {
         name: "blueberries",
@@ -77,19 +77,19 @@ document.addEventListener('DOMContentLoaded', () =>{
     // check if it matches 
     function checkForMatch(){
         const cards = document.querySelectorAll('img')
-        const optionOneId = cardsChosen[0]
-        const optionTwoId = cardsChosen[1]
+        const optionOneId = cardsChosenId[0]
+        const optionTwoId = cardsChosenId[1]
 
-        if (cardsChosen == cardsChosen) {
+        if (optionOneId == optionTwoId) {
             alert("you clicked the same image!");
-            cards[optionOneId].setAttribute('src','./images/color.png' )
-            cards[optionTwoId].setAttribute("src", "./images/color.png")
+            cards[optionOneId].setAttribute('src','./images/blank.png' )
+            cards[optionTwoId].setAttribute("src", "./images/blank.png")
             cardsWon.push(cardsChosen)
             
         } else if (cardsChosen[0] === cardsChosen[1]){
             alert("you found a match");
-            cards[optionOneId].setAttribute("src", "images/blank.png");
-            cards[optionTwoId].setAttribute("src", "images/blank.png");
+            cards[optionOneId].setAttribute("src", "images/color.png");
+            cards[optionTwoId].setAttribute("src", "images/color.png");
             cards[optionOneId].removeEventListener("click", flipCard);
             cards[optionTwoId].removeEventListener("click", flipCard);
             cardsWon.push(cardsChosen);
@@ -97,8 +97,8 @@ document.addEventListener('DOMContentLoaded', () =>{
         }
          else {
             alert("Sorry, Try Again");
-            cards[optionOneId].setAttribute('src','./images/color.png')
-            cards[optionTwoId].setAttribute('src', './images/color.png')
+            cards[optionOneId].setAttribute('src','./images/blank.png')
+            cards[optionTwoId].setAttribute('src', './images/blank.png')
             
         }
         cardsChosen = []
