@@ -2,52 +2,52 @@ document.addEventListener('DOMContentLoaded', () =>{
     // card option
     const cardArray = [
       {
-        name: "banana",
-        img: "./images/banana.png",
+        name: "candy",
+        img: "./images/candy.png",
       },
       {
-        name: "blueberries",
-        img: "./images/blueberry.png",
+        name: "cookie",
+        img: "./images/cookie.png",
       },
       {
-        name: "lemon",
-        img: "./images/lemon.png",
+        name: "pie",
+        img: "./images/pie.png",
       },
       {
-        name: "olive",
-        img: "./images/olive.png",
+        name: "sundae",
+        img: "./images/sundae.png",
       },
       {
-        name: "pear",
-        img: "./images/pear.png",
+        name: "cupcake",
+        img: "./images/cupcake.png",
       },
       {
-        name: "tomato",
-        img: "./images/tomato.png",
+        name: "donut",
+        img: "./images/donut.png",
       },
       {
-        name: "banana",
-        img: "./images/banana.png",
+        name: "candy",
+        img: "./images/candy.png",
       },
       {
-        name: "blueberries",
-        img: "./images/blueberry.png",
+        name: "cookie",
+        img: "./images/cookie.png",
       },
       {
-        name: "lemon",
-        img: "./images/lemon.png",
+        name: "pie",
+        img: "./images/pie.png",
       },
       {
-        name: "olive",
-        img: "./images/olive.png",
+        name: "sundae",
+        img: "./images/sundae.png",
       },
       {
-        name: "pear",
-        img: "./images/pear.png",
+        name: "cupcake",
+        img: "./images/cupcake.png",
       },
       {
-        name: "tomato",
-        img: "./images/tomato.png",
+        name: "donut",
+        img: "./images/donut.png",
       }
     ]
 
@@ -88,8 +88,8 @@ document.addEventListener('DOMContentLoaded', () =>{
             
         } else if (cardsChosen[0] === cardsChosen[1]){
             alert("you found a match");
-            cards[optionOneId].setAttribute("src", "images/color.png");
-            cards[optionTwoId].setAttribute("src", "images/color.png");
+            cards[optionOneId].setAttribute("src", "images/tick.png");
+            cards[optionTwoId].setAttribute("src", "images/tick.png");
             cards[optionOneId].removeEventListener("click", flipCard);
             cards[optionTwoId].removeEventListener("click", flipCard);
             cardsWon.push(cardsChosen);
